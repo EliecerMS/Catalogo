@@ -21,6 +21,10 @@
   		<td>
   		<h:inputText id="name" value="#{userBean.name}"></h:inputText>
   		</td>
+  		<td>
+  		<h:commandButton value="#{userBean.getUser()}"></h:commandButton>
+  		<h:outputText value="#{userBean.getUser()}"></h:outputText>
+  		</td>
   	</tr>
   	
   	</table>
