@@ -1,14 +1,16 @@
 package net.symbiotic.co.entity;
 
+import com.datastax.driver.mapping.annotations.ClusteringColumn;
+
 //import java.util.UUID;
 
 import com.datastax.driver.mapping.annotations.Column;
 import com.datastax.driver.mapping.annotations.PartitionKey;
 import com.datastax.driver.mapping.annotations.Table;
 
-import net.symbiotic.co.db.DBConstants;
+import net.symbiotic.co.db.DBConstantsBook;
 
-@Table(name = DBConstants.TABLE_USERS, keyspace = DBConstants.KEYSPACE)
+@Table(name = DBConstantsBook.TABLE_USERS, keyspace = DBConstantsBook.KEYSPACE)
 public class Book {
 
 	@PartitionKey
