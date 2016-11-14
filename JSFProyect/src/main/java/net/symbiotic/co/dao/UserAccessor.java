@@ -13,7 +13,7 @@ interface UserAccessor {
 	@Query("SELECT * FROM " + DBConstants.TABLE_USERS)
 	Result<User> findAll();
 	
-	@Query("SELECT * FROM " + DBConstants.TABLE_USERS + " WHERE name = ? LIMIT ONE")
+	@Query("SELECT * FROM " + DBConstants.TABLE_USERS + " WHERE name = ? 1")
 	User findByName(String name);
 	
 	
