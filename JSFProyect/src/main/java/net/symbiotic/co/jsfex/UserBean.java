@@ -14,7 +14,7 @@ import net.symbiotic.co.entity.User;
 public class UserBean {
  
     private String name;
-    private User user;
+//    private User user;
    
     @EJB
     UserDAO userDao;
