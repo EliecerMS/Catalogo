@@ -19,12 +19,12 @@
   		<h:outputLabel>Libro</h:outputLabel>
   		</td>
   		<td>
-  		<h:inputText id="name" value="#{userBean.name}"></h:inputText>
+  			<h:inputText id="name" value="#{userBean.name}" placeholder="Holaa"></h:inputText>
   		</td>
-  		<td>
-  		<h:commandButton value="#{userBean.getUser()}"></h:commandButton>
-  		<h:outputText value="#{userBean.getUser()}"></h:outputText>
-  		</td>
+    		<td> 
+   		<h:commandButton action="#{userBean.getUser()}" value="Buscar"></h:commandButton> 
+   		<h:outputText value="#{userBean.user_id}"></h:outputText> 
+   		</td> 
   	</tr>
   	
   	</table>

@@ -6,7 +6,7 @@ import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
 
 import net.symbiotic.co.dao.BookDAO;
-//import net.symbiotic.co.entity.User;
+//import net.symbiotic.co.entity.Book;
 
 @ManagedBean
 @SessionScoped

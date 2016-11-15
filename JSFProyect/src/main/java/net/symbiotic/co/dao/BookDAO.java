@@ -5,6 +5,7 @@ import java.util.List;
 
 import javax.annotation.PostConstruct;
 import javax.ejb.EJB;
+import javax.ejb.Singleton;
 
 import com.datastax.driver.mapping.Mapper;
 import com.datastax.driver.mapping.MappingManager;
@@ -12,6 +13,7 @@ import com.datastax.driver.mapping.MappingManager;
 import net.symbiotic.co.db.DBClientHelper;
 import net.symbiotic.co.entity.Book;
 
+@Singleton
 public class BookDAO {
 
 	/**

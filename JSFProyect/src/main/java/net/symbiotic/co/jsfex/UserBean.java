@@ -14,7 +14,7 @@ import net.symbiotic.co.entity.User;
 public class UserBean {
  
     private String name;
-//    private User user;
+    private String user_id;
    
     @EJB
     UserDAO userDao;
@@ -22,7 +22,6 @@ public class UserBean {
     
     @PostConstruct
     public void init(){
-    	
     	
     }
     
@@ -34,11 +33,16 @@ public class UserBean {
         this.name = name;
     }
     
-    public User getUser(String name){
-    	return userDao.findByName(name);
+    public void getUser(){
+    	User u = userDao.findByName(name);
+    	this.user_id =  u.getUserId().toString();
     }
 
- 
+	public String getUser_id() {
+		return user_id;
+	}
+    
+    
     
 
 }
