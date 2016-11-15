@@ -8,9 +8,9 @@ import com.datastax.driver.mapping.annotations.Column;
 import com.datastax.driver.mapping.annotations.PartitionKey;
 import com.datastax.driver.mapping.annotations.Table;
 
-import net.symbiotic.co.db.DBConstantsBook;
+import net.symbiotic.co.db.DBConstants;
 
-@Table(name = DBConstantsBook.TABLE_USERS, keyspace = DBConstantsBook.KEYSPACE)
+@Table(name = DBConstants.TABLE_BOOK, keyspace = DBConstants.KEYSPACE)
 public class Book {
 
 	@PartitionKey

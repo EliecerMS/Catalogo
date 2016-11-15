@@ -52,8 +52,8 @@ public class BookDAO {
 		BookMapper.delete(theUser);
 	}
 	
-	public Book findByName(final String name){
-		return BookAccessor.findByName(name);
+	public Book findByAutor(final String autor){
+		return BookAccessor.findByAutor(autor);
 	}
 	
 	public List<Book> findAll(){
