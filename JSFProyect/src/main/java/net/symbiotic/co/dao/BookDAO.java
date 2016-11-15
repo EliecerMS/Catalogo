@@ -39,8 +39,8 @@ public class BookDAO {
 		
 	}
 
-	public void save(final Book user) {
-		BookMapper.save(user);
+	public void save(final Book libro) {
+		BookMapper.save(libro);
 		
 	}
 	
@@ -52,9 +52,9 @@ public class BookDAO {
 		BookMapper.delete(theUser);
 	}
 	
-	public Book findByAutor(final String autor){
-		return BookAccessor.findByAutor(autor);
-	}
+//	public Book findByAutor(final String autor){
+//		return BookAccessor.findByAutor(autor);
+//	}
 	
 	public List<Book> findAll(){
 		return BookAccessor.findAll().all();

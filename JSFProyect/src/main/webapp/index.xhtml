@@ -14,22 +14,54 @@
 <h:body>
   <h:form>
   	<table>
-  	<tr>
-  		<td>
-  		<h:outputLabel>Libro</h:outputLabel>
-  		</td>
-  		<td>
-  			<h:inputText id="name" value="#{userBean.name}" placeholder="Holaa"></h:inputText>
-  		</td>
-    		<td> 
-   		<h:commandButton action="#{userBean.getUser()}" value="Buscar"></h:commandButton> 
-   		<h:outputText value="#{userBean.user_id}"></h:outputText> 
-   		</td> 
-  	</tr>
-  	
-  	</table>
+	  	<tr>
+	  		<td><h:outputLabel>Libro</h:outputLabel></td>
+	  		
+	  		<td><h:inputText id="name" value="#{userBean.name}" placeholder="Holaa"></h:inputText></td>
+	  		
+	    	<td><h:commandButton action="#{userBean.getUser()}" value="Buscar"></h:commandButton> 
+	   		<h:outputText value="#{userBean.user_id}"></h:outputText></td> 
+	  	</tr>
+	</table>
+  </h:form>
   
-  
+  <h:form>
+  	<h:panelGrid Columns="3">
+        
+            <h:outputLabel>Autor</h:outputLabel>
+            <h:inputText value="#{indexFaces.autor}"></h:inputText>
+            <br />
+        
+            <h:outputLabel>ISBN</h:outputLabel>
+            <h:inputText value="#{indexFaces.isbn}"></h:inputText>
+            <br />
+            
+            <h:outputLabel>Año</h:outputLabel>
+            <h:inputText value="#{indexFaces.anio}"></h:inputText>
+            <br />
+            
+            <h:outputLabel>Nombre</h:outputLabel>
+            <h:inputText value="#{indexFaces.nombre}"></h:inputText>
+            <br />
+            
+            <h:outputLabel>Editorial</h:outputLabel>
+            <h:inputText value="#{indexFaces.editorial}"></h:inputText>
+            <br />
+            
+            <h:outputLabel>Precio</h:outputLabel>
+            <h:inputText value="#{indexFaces.precio}"></h:inputText>
+            <br />
+        
+            <h:outputLabel>Tema</h:outputLabel>
+            <h:inputText value="#{indexFaces.tema}"></h:inputText>
+            <br />
+            
+            <h:outputLabel>Descripción</h:outputLabel>
+            <h:inputText value="#{indexFaces.description}"></h:inputText>
+            <br />
+            <h:commandButton value="Aceptar" action="#{indexFaces.guardar()}"></h:commandButton>
+        
+        </h:panelGrid>
   </h:form>
 	
 </h:body>
