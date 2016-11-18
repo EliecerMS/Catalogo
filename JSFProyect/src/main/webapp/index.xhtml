@@ -4,65 +4,59 @@
  
 <html xmlns="http://www.w3.org/1999/xhtml"
     xmlns:f="http://java.sun.com/jsf/core"
-    xmlns:h="http://java.sun.com/jsf/html">
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:p="http://xmlns.jcp.org/jsf/passthrough"
+    xmlns:c="http://primefaces.org/ui">
  
 <f:loadBundle basename="net.symbiotic.jsf.properties.messages" var="msg" />
  
 <h:head>
-    <title>JSF 2.0 Greeting</title>
+    <title>Catalogo</title>
+    <h:outputStylesheet name="css/styles.css" />
 </h:head>
-<h:body>
+<h:body styleClass="font">
+  <br />
   <h:form>
-  	<table>
-	  	<tr>
-	  		<td><h:outputLabel>Libro</h:outputLabel></td>
-	  		
-	  		<td><h:inputText id="name" value="#{userBean.name}" placeholder="Holaa"></h:inputText></td>
-	  		
-	    	<td><h:commandButton action="#{userBean.getUser()}" value="Buscar"></h:commandButton> 
-	   		<h:outputText value="#{userBean.user_id}"></h:outputText></td> 
-	  	</tr>
-	</table>
-  </h:form>
-  
-  <h:form>
-  	<h:panelGrid Columns="3">
+  	<h:panelGrid>
         
-            <h:outputLabel>Autor</h:outputLabel>
-            <h:inputText value="#{indexFaces.autor}"></h:inputText>
+<!--             <h:outputLabel>Autor</h:outputLabel> -->
+            <h:inputText value="#{indexFaces.autor}" p:placeholder="Autor" styleClass="inputtext font"></h:inputText>
             <br />
         
-            <h:outputLabel>ISBN</h:outputLabel>
-            <h:inputText value="#{indexFaces.isbn}"></h:inputText>
+<!--             <h:outputLabel>ISBN</h:outputLabel> -->
+            <h:inputText value="#{indexFaces.isbn}" p:placeholder="ISBN" styleClass="inputtext font"></h:inputText>
             <br />
             
-            <h:outputLabel>Año</h:outputLabel>
-            <h:inputText value="#{indexFaces.anio}"></h:inputText>
+<!--             <h:outputLabel>Año</h:outputLabel>  -->
+            <h:inputText value="#{indexFaces.anio}" p:placeholder="Año" styleClass="inputtext font"></h:inputText>
             <br />
             
-            <h:outputLabel>Nombre</h:outputLabel>
-            <h:inputText value="#{indexFaces.nombre}"></h:inputText>
+<!--             <h:outputLabel>Nombre</h:outputLabel> -->
+            <h:inputText value="#{indexFaces.nombre}" p:placeholder="Nombre" styleClass="inputtext font"></h:inputText>
             <br />
             
-            <h:outputLabel>Editorial</h:outputLabel>
-            <h:inputText value="#{indexFaces.editorial}"></h:inputText>
+<!--             <h:outputLabel>Editorial</h:outputLabel> -->
+            <h:inputText value="#{indexFaces.editorial}" p:placeholder="Editorial" styleClass="inputtext font"></h:inputText>
             <br />
             
-            <h:outputLabel>Precio</h:outputLabel>
-            <h:inputText value="#{indexFaces.precio}"></h:inputText>
+<!--             <h:outputLabel>Precio</h:outputLabel> -->
+            <h:inputText value="#{indexFaces.precio}" p:placeholder="Precio" styleClass="inputtext font"></h:inputText>
             <br />
         
-            <h:outputLabel>Tema</h:outputLabel>
-            <h:inputText value="#{indexFaces.tema}"></h:inputText>
+<!--             <h:outputLabel>Tema</h:outputLabel> -->
+            <h:inputText value="#{indexFaces.tema}" p:placeholder="Tema" styleClass="inputtext font"></h:inputText>
             <br />
             
-            <h:outputLabel>Descripción</h:outputLabel>
-            <h:inputText value="#{indexFaces.description}"></h:inputText>
+<!--             <h:outputLabel>Descripción</h:outputLabel> -->
+            <h:inputText value="#{indexFaces.description}" p:placeholder="Descripción" styleClass="inputtext font"></h:inputText>
             <br />
-            <h:commandButton value="Aceptar" action="#{indexFaces.guardar()}"></h:commandButton>
+            <h:commandButton value="Aceptar" action="#{indexFaces.guardar()}" styleClass="buttons font"></h:commandButton>
         
         </h:panelGrid>
   </h:form>
+  
+<!--   DATATABLE  -->
+<br />
 	
 </h:body>
 </html>

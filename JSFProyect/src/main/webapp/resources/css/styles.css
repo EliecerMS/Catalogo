@@ -1,0 +1,41 @@
+/*@import url('https://fonts.googleapis.com/css?family=Droid+Sans');*/
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+body{
+	background-color: #1f2020;
+}
+.font{
+	font-family: 'Montserrat', sans-serif;
+	font-size: 90%;
+	font-weight: normal;
+	color:#d3d3d3;
+	letter-spacing: 1px;
+}
+.inputtext{
+	border-radius: 6px;
+	background-color: transparent;
+	border: 1pt solid #919191;
+	color:#d3d3d3;
+	height: 200%;
+	padding: 0px 15px 0px 15px;
+}
+.buttons{
+	border-radius: 8px;
+	background-color: #424242;
+	border: none;
+	height: 200%;
+	padding: 3px 17px 3px 17px;
+	/* Firefox */
+	/*-moz-transition: 0.4s ease; */
+	/* Chrome - Safari */
+	-webkit-transition: 0.4s ease;
+	/* Opera */
+	/*-o-transition: 0.4s ease; */
+}
+.buttons:hover{
+	background-color: #595959;
+	transition-duration: 0.5s;
+}
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: rgba(155, 155, 155, 0.5);
+}

@@ -25,6 +25,7 @@ public class IndexFaces {
     private String nombre;
     private String precio;
     private String tema;
+    private String productImage="http://movietimepoblado.com/wp-content/uploads/2011/04/Harry_Potter_Y_Las_Reliquias_De_La_Muerte_-_Parte_1_-_Region_4_por_Seba19_dvd_80.jpg";
     
     @EJB
     UserDAO userDao;
@@ -117,6 +118,16 @@ public class IndexFaces {
 
 	public void setTema(String tema) {
 		this.tema = tema;
+	}
+	
+	
+
+	public String getProductImage() {
+		return productImage;
+	}
+
+	public void setProductImage(String productImage) {
+		this.productImage = productImage;
 	}
 
 	public void guardar(){

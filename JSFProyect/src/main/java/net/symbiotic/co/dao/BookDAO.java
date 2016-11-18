@@ -52,9 +52,9 @@ public class BookDAO {
 		BookMapper.delete(theUser);
 	}
 	
-//	public Book findByAutor(final String autor){
-//		return BookAccessor.findByAutor(autor);
-//	}
+	public Book findByAutor(final String autor){
+		return BookAccessor.findByAutor(autor);
+	}
 	
 	public List<Book> findAll(){
 		return BookAccessor.findAll().all();
