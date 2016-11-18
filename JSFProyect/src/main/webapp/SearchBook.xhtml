@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+ 
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:f="http://java.sun.com/jsf/core"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:p="http://xmlns.jcp.org/jsf/passthrough"
+    xmlns:c="http://primefaces.org/ui">
+ 
+<f:loadBundle basename="net.symbiotic.jsf.properties.messages" var="msg" />
+ 
+<h:head>
+    <title>Catalogo</title>
+    <h:outputStylesheet name="css/styles.css" />
+</h:head>
+<h:body styleClass="font">
+	<h:form>
+		<h:dataTable value="#{searchBookFaces.bookList}" var="book" border="1">
+
+			<h:column>
+				
+				<h:outputText value="#{book.nombre}" />
+			</h:column>
+
+			<h:column>
+				
+				<h:outputText value="#{book.description}" />
+			</h:column>
+			<h:column>
+				
+				<h:outputText value="#{book.precio}" />
+			</h:column>
+		</h:dataTable>
+	</h:form>
+</h:body>
+</html>

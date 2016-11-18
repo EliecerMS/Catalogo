@@ -44,6 +44,7 @@ public class Book {
 	
 	public Book(String autor, String isbn, String anio, String description, String editorial, String nombre, double precio, String tema) {
 		this.autor = autor;
+		this.isbn = isbn;
 		this.anio = anio;
 		this.description = description;
 		this.editorial = editorial;

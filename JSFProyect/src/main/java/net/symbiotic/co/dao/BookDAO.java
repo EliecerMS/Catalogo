@@ -59,5 +59,4 @@ public class BookDAO {
 	public List<Book> findAll(){
 		return BookAccessor.findAll().all();
 	}
-
 }
