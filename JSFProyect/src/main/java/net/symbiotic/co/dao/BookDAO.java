@@ -55,6 +55,9 @@ public class BookDAO {
 	public Book findByAutor(final String autor){
 		return BookAccessor.findByAutor(autor);
 	}
+//	public List<Book> findByAutor(final String autor){
+//		return BookAccessor.findByAutor(autor);
+//	}
 	
 	public List<Book> findAll(){
 		return BookAccessor.findAll().all();

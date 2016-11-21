@@ -1,14 +1,20 @@
 /*@import url('https://fonts.googleapis.com/css?family=Droid+Sans');*/
 @import url('https://fonts.googleapis.com/css?family=Montserrat');
 
-body{
+/* estilos generales */
+
+
+html, .body{
 	background-color: #1f2020;
+	margin:0;
+	height: 100%;
 }
 .font{
 	font-family: 'Montserrat', sans-serif;
 	font-size: 90%;
 	font-weight: normal;
-	color:#d3d3d3;
+	color: #adacac;
+/* 	#d3d3d3; */
 	letter-spacing: 1px;
 }
 .inputtext{
@@ -16,15 +22,14 @@ body{
 	background-color: transparent;
 	border: 1pt solid #919191;
 	color:#d3d3d3;
-	height: 200%;
-	padding: 0px 15px 0px 15px;
+	padding: 9px 15px 9px 15px;
 }
 .buttons{
 	border-radius: 8px;
 	background-color: #424242;
 	border: none;
-	height: 200%;
-	padding: 3px 17px 3px 17px;
+	height: 40px;
+	padding: 3px 34px 3px 34px;
 	/* Firefox */
 	/*-moz-transition: 0.4s ease; */
 	/* Chrome - Safari */
@@ -32,10 +37,105 @@ body{
 	/* Opera */
 	/*-o-transition: 0.4s ease; */
 }
+
 .buttons:hover{
 	background-color: #595959;
 	transition-duration: 0.5s;
 }
+
+
 ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
   color: rgba(155, 155, 155, 0.5);
+}
+
+/* estilos SaveBook.xhtml */
+
+
+.first-container{
+  display: flex;
+  overflow: hidden;
+  position:relative;
+  height:100%;
+}
+
+.div_image{
+	top: 0; bottom: 0;  width:27%; position:absolute; background-color:#353535; padding:25px 25px 0px 25px;
+}
+
+.divoptionssave{
+	float: right;
+	margin-top: 90px;
+}
+
+/* estilos divsscroll */
+
+
+.divscroll {
+   overflow-y: scroll;
+   margin-left:31%; flex:1; padding:25px 25px 20px 25px; background-color:#1f2020;
+   top: 0; bottom: 0;
+}
+
+/* Estilos Tabla SearchBook.xhtml*/
+
+
+.employeeTable{
+   border-collapse:collapse;
+}
+
+.employeeTableHeader{
+   text-align:center;
+   background:none repeat scroll 0 0 #B5B5B5;
+   padding:2px;
+}
+
+.employeeTableOddRow{
+   text-align:center;
+   background:none repeat scroll 0 0 #383838;
+   border-bottom: 25px solid #1f2020;
+   width: 13%;
+   padding:17px 17px 17px 17px;	
+}
+
+.employeeTableEvenRow{
+   text-align:justify;
+   background:none repeat scroll 0 0 #2b2b2b;
+   border-bottom: 25px solid #1f2020;
+   padding:17px 17px 17px 17px;
+}
+
+.divcriterioBusqueda{
+	margin-top:23px;
+	padding:0px 46px 0px 44px;
+	margin-bottom:23px;
+}
+
+.divscrollresults {
+   overflow-y: scroll;
+   flex:1; padding:0px 44px 0px 44px; background-color:#1f2020;
+   top: 0; bottom: 0;
+   height:85%;
+}
+
+.bodySearch{
+	background-color: #1f2020;
+	margin:0;
+}
+
+/* estilos barras verticales divsscroll */
+
+
+.divscroll::-webkit-scrollbar, .divscrollresults::-webkit-scrollbar{
+    width: 12px;
+}
+
+.divscroll::-webkit-scrollbar-track, .divscrollresults::-webkit-scrollbar-track {
+    background-color:#424242;
+
+    border-radius: 10px;
+}
+
+.divscroll::-webkit-scrollbar-thumb, .divscrollresults::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color:  #dddddd;
 }

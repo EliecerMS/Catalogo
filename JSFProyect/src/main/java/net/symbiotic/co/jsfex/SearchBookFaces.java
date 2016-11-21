@@ -1,6 +1,6 @@
 package net.symbiotic.co.jsfex;
 
-import java.util.ArrayList;
+//import java.util.ArrayList;
 import java.util.List;
 
 import javax.annotation.PostConstruct;
@@ -28,4 +28,9 @@ public class SearchBookFaces {
 	public List<Book> getBookList(){
 		return bookList;
 	}
+
+//	public void findByAutor(String autor){
+//	    Book u = bookDAO.findByName(name);
+//	    this.user_id =  u.getUserId().toString();
+//	}
 }

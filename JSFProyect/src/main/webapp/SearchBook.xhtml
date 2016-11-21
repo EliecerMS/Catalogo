@@ -11,27 +11,53 @@
 <f:loadBundle basename="net.symbiotic.jsf.properties.messages" var="msg" />
  
 <h:head>
-    <title>Catalogo</title>
+    <title>Buscar Libro</title>
     <h:outputStylesheet name="css/styles.css" />
 </h:head>
-<h:body styleClass="font">
+<h:body styleClass="font bodySearch">
+
+<h:panelGroup layout="block" styleClass="divcriterioBusqueda">
+	<h:inputText value="" p:placeholder="Criterio de Búsqueda" styleClass="inputtext font" style="width:86%"></h:inputText>
+	<h:commandButton value="Buscar" styleClass="buttons font" style="margin-left:17px"/>
+</h:panelGroup>
+
+<h:panelGroup layout="block" styleClass="divscrollresults">
 	<h:form>
-		<h:dataTable value="#{searchBookFaces.bookList}" var="book" border="1">
+		<h:dataTable value="#{searchBookFaces.bookList}" var="book" 
+		styleClass="employeeTable"
+         headerClass="employeeTableHeader"
+         columnClasses="employeeTableOddRow,employeeTableEvenRow">
 
 			<h:column>
-				
+				<h:graphicImage value="https://s-media-cache-ak0.pinimg.com/236x/8b/ed/32/8bed321a677f52ce3e3e746a2ce78a48.jpg" style="width:80%; display:block; margin:auto"/>
 				<h:outputText value="#{book.nombre}" />
 			</h:column>
-
+				<hr/>
+			
 			<h:column>
-				
+				<h:outputLabel value="Descripción" style="text-decoration:underline"/>
+				<br />
 				<h:outputText value="#{book.description}" />
-			</h:column>
-			<h:column>
-				
+				<br />
+				<br />
+				<h:outputLabel value="Precio" style="text-decoration:underline"/>
+				<br />
+				<h:outputLabel value="₡"/>
 				<h:outputText value="#{book.precio}" />
+				<br />
+				<h:commandButton value="Ver libro" styleClass="buttons font" style="margin-top:40px">
+<!--                   action="#{userData.editEmployee}"  -->
+<!--                   rendered="#{not employee.canEdit}"  -->
+<!--                   styleClass="buttons font" style="margin-top:40px">    -->
+<!--                   <f:setPropertyActionListener  -->
+<!--                      target="#{userData.employee}" value="#{employee}" /> -->
+               </h:commandButton>
+               
+			
 			</h:column>
 		</h:dataTable>
 	</h:form>
+</h:panelGroup>
+
 </h:body>
 </html>

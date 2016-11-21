@@ -11,52 +11,57 @@
 <f:loadBundle basename="net.symbiotic.jsf.properties.messages" var="msg" />
  
 <h:head>
-    <title>Catalogo</title>
+    <title>Guardar Libro</title>
     <h:outputStylesheet name="css/styles.css" />
 </h:head>
-<h:body styleClass="font">
-  <br />
-  <h:form>
-  	<h:panelGrid>
+<h:body styleClass="font body">
+	<h:panelGroup layout="bolck" styleClass="first-container">
+		<h:panelGroup layout="block" styleClass="div_image"></h:panelGroup>
+		<h:panelGroup layout="block" styleClass="divscroll">
+			<h:form>
+  				<h:panelGrid>
         
-<!--             <h:outputLabel>Autor</h:outputLabel> -->
-            <h:inputText value="#{indexFaces.autor}" p:placeholder="Autor" styleClass="inputtext font"></h:inputText>
-            <br />
-        
-<!--             <h:outputLabel>ISBN</h:outputLabel> -->
-            <h:inputText value="#{indexFaces.isbn}" p:placeholder="ISBN" styleClass="inputtext font"></h:inputText>
-            <br />
-            
-<!--             <h:outputLabel>Año</h:outputLabel>  -->
-            <h:inputText value="#{indexFaces.anio}" p:placeholder="Año" styleClass="inputtext font"></h:inputText>
-            <br />
-            
-<!--             <h:outputLabel>Nombre</h:outputLabel> -->
-            <h:inputText value="#{indexFaces.nombre}" p:placeholder="Nombre" styleClass="inputtext font"></h:inputText>
-            <br />
-            
-<!--             <h:outputLabel>Editorial</h:outputLabel> -->
-            <h:inputText value="#{indexFaces.editorial}" p:placeholder="Editorial" styleClass="inputtext font"></h:inputText>
-            <br />
-            
-<!--             <h:outputLabel>Precio</h:outputLabel> -->
-            <h:inputText value="#{indexFaces.precio}" p:placeholder="Precio" styleClass="inputtext font"></h:inputText>
-            <br />
-        
-<!--             <h:outputLabel>Tema</h:outputLabel> -->
-            <h:inputText value="#{indexFaces.tema}" p:placeholder="Tema" styleClass="inputtext font"></h:inputText>
-            <br />
-            
-<!--             <h:outputLabel>Descripción</h:outputLabel> -->
-            <h:inputText value="#{indexFaces.description}" p:placeholder="Descripción" styleClass="inputtext font"></h:inputText>
-            <br />
-            <h:commandButton value="Aceptar" action="#{indexFaces.guardar()}" styleClass="buttons font"></h:commandButton>
-        
-        </h:panelGrid>
-  </h:form>
-  
-<!--   DATATABLE  -->
-<br />
+		<!--             <h:outputLabel>Autor</h:outputLabel> -->
+		            <h:inputText value="#{indexFaces.autor}" p:placeholder="Autor" styleClass="inputtext font"></h:inputText>
+		            <br />
+		        	<br />
+		<!--             <h:outputLabel>ISBN</h:outputLabel> -->
+		            <h:inputText value="#{indexFaces.isbn}" p:placeholder="ISBN" styleClass="inputtext font"></h:inputText>
+		            <br />
+					<br />
+		            
+		<!--             <h:outputLabel>Año</h:outputLabel>  -->
+		            <h:inputText value="#{indexFaces.anio}" p:placeholder="Año" styleClass="inputtext font"></h:inputText>
+		            <br />
+		            <br />
+		<!--             <h:outputLabel>Nombre</h:outputLabel> -->
+		            <h:inputText value="#{indexFaces.nombre}" p:placeholder="Nombre" styleClass="inputtext font"></h:inputText>
+		            <br />
+		            <br />
+		<!--             <h:outputLabel>Editorial</h:outputLabel> -->
+		            <h:inputText value="#{indexFaces.editorial}" p:placeholder="Editorial" styleClass="inputtext font"></h:inputText>
+		            <br />
+		            <br />
+		<!--             <h:outputLabel>Precio</h:outputLabel> -->
+		            <h:inputText value="#{indexFaces.precio}" p:placeholder="Precio" styleClass="inputtext font"></h:inputText>
+		            <br />
+		        	<br />
+		<!--             <h:outputLabel>Tema</h:outputLabel> -->
+		            <h:inputText value="#{indexFaces.tema}" p:placeholder="Tema" styleClass="inputtext font"></h:inputText>
+		            <br />
+		            <br />
+		<!--             <h:outputLabel>Descripción</h:outputLabel> -->
+		            <h:inputText value="#{indexFaces.description}" p:placeholder="Descripción" styleClass="inputtext font"></h:inputText>
+		            <br />
+		       </h:panelGrid>
+ 			 </h:form>
+ 			 <h:panelGroup layout="block" styleClass="divoptionssave">
+		        <h:commandButton value="Guardar" action="#{indexFaces.guardar()}" styleClass="buttons font"></h:commandButton>
+		     </h:panelGroup>
+<!-- 		     PRUEBA -->
+		</h:panelGroup>
+	</h:panelGroup>
+
 	
 </h:body>
 </html>
