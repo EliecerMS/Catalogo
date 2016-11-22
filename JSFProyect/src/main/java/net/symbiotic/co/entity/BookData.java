@@ -1,19 +1,14 @@
 package net.symbiotic.co.entity;
 
-import java.io.Serializable;
-import java.util.ArrayList;
-import java.util.Arrays;
 
 //import javax.annotation.PostConstruct;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
 
-@ManagedBean(name = "BookData", eager = true)
+@ManagedBean
 @SessionScoped 
 
-public class BookData implements Serializable{
-	
-	private static final long serialVersionUID = 1L;
+public class BookData {
 	
 	private String autor;
 	private String isbn;
@@ -23,16 +18,6 @@ public class BookData implements Serializable{
 	private String nombre;
 	private String precio;
 	private String tema;
-
-
-		private static final ArrayList<Book> libros 
-		= new ArrayList<Book>(Arrays.asList(
-		new Book("eklnh","hola", "jg", "fkfk", "ddfsj", "snjfd", 1234, "ho")));
-		
-		
-		public ArrayList<Book> getLibros(){
-			return libros;
-		}
 
 		public String getAutor() {
 			return autor;

@@ -12,6 +12,7 @@
  
 <h:head>
     <title>Guardar Libro</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <h:outputStylesheet name="css/styles.css" />
 </h:head>
 <h:body styleClass="font body">
@@ -53,10 +54,11 @@
 		<!--             <h:outputLabel>Descripción</h:outputLabel> -->
 		            <h:inputText value="#{indexFaces.description}" p:placeholder="Descripción" styleClass="inputtext font"></h:inputText>
 		            <br />
+		            <h:commandButton value="Guardar" action="#{indexFaces.guardar()}"></h:commandButton>
 		       </h:panelGrid>
  			 </h:form>
  			 <h:panelGroup layout="block" styleClass="divoptionssave">
-		        <h:commandButton value="Guardar" action="#{indexFaces.guardar()}" styleClass="buttons font"></h:commandButton>
+<!-- 		        <h:commandButton value="Guardar" action="#{IndexFaces.guardar()}" styleClass="buttons font"></h:commandButton> -->
 		     </h:panelGroup>
 <!-- 		     PRUEBA -->
 		</h:panelGroup>
