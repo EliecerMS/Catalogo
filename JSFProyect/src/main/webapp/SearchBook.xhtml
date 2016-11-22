@@ -15,15 +15,15 @@
     <h:outputStylesheet name="css/styles.css" />
 </h:head>
 <h:body styleClass="font bodySearch">
-
+<h:form>
 <h:panelGroup layout="block" styleClass="divcriterioBusqueda">
-	<h:inputText value="" p:placeholder="Criterio de Búsqueda" styleClass="inputtext font" style="width:86%"></h:inputText>
-	<h:commandButton value="Buscar" styleClass="buttons font" style="margin-left:17px"/>
+	<h:inputText value="#{searchBookFaces.name}" p:placeholder="Criterio de Búsqueda" styleClass="inputtext font" style="width:86%"></h:inputText>
+	<h:commandButton value="Buscar" action="#{searchBookFaces.VerResult()}" styleClass="buttons font" style="margin-left:17px"/>
 </h:panelGroup>
 
 <h:panelGroup layout="block" styleClass="divscrollresults">
-	<h:form>
-		<h:dataTable value="#{searchBookFaces.bookList}" var="book" 
+	
+		<h:dataTable value="#{searchBookFaces.bookResult}" var="book" 
 		styleClass="employeeTable"
          headerClass="employeeTableHeader"
          columnClasses="employeeTableOddRow,employeeTableEvenRow">
@@ -56,8 +56,8 @@
 			
 			</h:column>
 		</h:dataTable>
-	</h:form>
+	
 </h:panelGroup>
-
+</h:form>
 </h:body>
 </html>
