@@ -91,6 +91,13 @@ hr{
 	margin-left: 0;
 }
 
+.container1{
+  margin:0 auto;
+  position:relative;
+  overflow: hidden;
+  max-width: 1366px;
+  min-width: 1349px;
+}
 /* estilos SaveBook.xhtml */
 
 
@@ -99,6 +106,9 @@ hr{
   overflow: hidden;
   position:relative;
   height:100%;
+  max-width: 1366px;
+  min-width: 1349px;
+  margin:0 auto;
 }
 
 .div_image{

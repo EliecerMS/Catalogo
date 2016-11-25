@@ -15,13 +15,18 @@
     <h:outputStylesheet name="css/styles.css" />
 </h:head>
 <h:body styleClass="font bodySearch">
-<h:form>
+<!-- <h:panelGroup layout="bolck" styleClass="first-container"> -->
+<h:form style="
+  max-width: 1366px;
+  min-width: 1349px;
+  margin:0 auto">
 <h:panelGroup layout="block" styleClass="divcriterioBusqueda">
 	<h:inputText value="#{searchBookFaces.name}" p:placeholder="Criterio de Búsqueda" styleClass="inputtext font" style="width:86%"></h:inputText>
 	<h:commandButton value="Buscar" action="#{searchBookFaces.VerResult()}" styleClass="buttons font" style="margin-left:17px"/>
 </h:panelGroup>
 
 <h:panelGroup layout="block" styleClass="divscrollresults">
+	<h:outputText value="#{searchBookFaces.message}"></h:outputText>
 	
 		<h:dataTable value="#{searchBookFaces.bookResult}" var="book" 
 		styleClass="employeeTable"
@@ -29,7 +34,7 @@
          columnClasses="employeeTableOddRow,employeeTableEvenRow">
 
 			<h:column>
-				<h:graphicImage value="https://s-media-cache-ak0.pinimg.com/236x/8b/ed/32/8bed321a677f52ce3e3e746a2ce78a48.jpg" style="width:80%; display:block; margin:auto"/>
+				<h:graphicImage value="#{book.imagen}" style="width:80%; display:block; margin:auto"/>
 				<h:outputText value="#{book.nombre}" />
 			</h:column>
 				<hr/>
@@ -56,8 +61,8 @@
 			
 			</h:column>
 		</h:dataTable>
-	
-</h:panelGroup>
+	</h:panelGroup>
 </h:form>
+<!-- </h:panelGroup> -->
 </h:body>
 </html>

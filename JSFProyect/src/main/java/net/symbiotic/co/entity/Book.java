@@ -38,11 +38,14 @@ public class Book {
 	@Column
 	private String tema;
 	
+	@Column
+	private String imagen;
+	
 	public Book(){
 		
 	}
 	
-	public Book(String autor, String isbn, String anio, String description, String editorial, String nombre, double precio, String tema) {
+	public Book(String autor, String isbn, String anio, String description, String editorial, String nombre, double precio, String tema, String imagen) {
 		this.autor = autor;
 		this.isbn = isbn;
 		this.anio = anio;
@@ -51,6 +54,7 @@ public class Book {
 		this.nombre= nombre;
 		this.precio = precio;
 		this.tema = tema;
+		this.imagen = imagen;
 	}
 
 	public String getAutor() {
@@ -116,6 +120,15 @@ public class Book {
 	public void setTema(String tema) {
 		this.tema = tema;
 	}
+
+	public String getImagen() {
+		return imagen;
+	}
+
+	public void setImagen(String imagen) {
+		this.imagen = imagen;
+	}
+	
 	
 }
 	

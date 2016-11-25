@@ -14,7 +14,7 @@ interface BookAccessor {
 	Result<Book> findAll();
 	
 //	@Query("SELECT * FROM " + DBConstants.TABLE_BOOK + " WHERE name = ? LIMIT 1")
-	@Query("SELECT *  FROM " + DBConstants.TABLE_BOOK + " WHERE nombre = ? LIMIT 1")
+	@Query("SELECT *  FROM " + DBConstants.TABLE_BOOK + " WHERE autor = ?")
 	Result<Book> findByName(String name);
 
 }

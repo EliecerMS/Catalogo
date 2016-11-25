@@ -1,5 +1,6 @@
 package net.symbiotic.co.jsfex;
 
+import java.util.Iterator;
 //import java.util.ArrayList;
 import java.util.List;
 
@@ -21,13 +22,14 @@ public class SearchBookFaces {
 	BookDAO bookDAO;
 	private List<Book> bookList;
 	private List<Book> bookResult;
+	private List<Book> bookFiltrado;
+//	private Iterator<Book> it= bookList.iterator();
 	private String name;
+	private String message;
 	
 	@PostConstruct 
 	private void init(){
-//		bookList = bookDAO.findAll();
-		name = "";
-		this.VerResult();
+		VerTodos();
 	}
 	
 	public List<Book> getBookList(){
@@ -46,8 +48,45 @@ public class SearchBookFaces {
 	public void setName(String name) {
 		this.name = name;
 	}
+	
+	public String getMessage() {
+		return message;
+	}
+
+	public void setMessage(String message) {
+		this.message = message;
+	}
 
 	public void VerResult(){
-    	this.bookResult = bookDAO.findByName(name);
+		if(bookDAO.findByName(name)==null){
+			this.message = "No se han encontrado resultados";
+		}
+		else{
+			this.bookResult = bookDAO.findByName(name);
+			this.message = "";
+		}
+		
     }
+	
+	public void VerTodos(){
+		this.bookList = bookDAO.findAll();
+	}
+	
+	public void LibroFiltrado(){
+		
+		for( Book s : this.bookList ){
+			if (s.getNombre().contains(name)) {
+				this.bookFiltrado.add(s);
+				break;
+			}
+			if (s.getDescription().contains(name)) {
+				this.bookFiltrado.add(s);
+				break;
+			}
+			if (s.getAutor().contains(name)) {
+				this.bookFiltrado.add(s);
+				break;
+			}
+		}
+	}
 }
