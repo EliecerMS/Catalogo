@@ -23,9 +23,11 @@ public class SearchBookFaces {
 	private List<Book> bookList;
 	private List<Book> bookResult;
 	private List<Book> bookFiltrado;
-//	private Iterator<Book> it= bookList.iterator();
+
+	//	private Iterator<Book> it= bookList.iterator();
 	private String name;
 	private String message;
+//	private Book selectedBook;
 	
 	@PostConstruct 
 	private void init(){
@@ -38,6 +40,11 @@ public class SearchBookFaces {
 
 	public List<Book> getBookResult() {
 		return bookResult;
+	}
+	
+
+	public List<Book> getBookFiltrado() {
+		return bookFiltrado;
 	}
 	
 	
@@ -72,21 +79,41 @@ public class SearchBookFaces {
 		this.bookList = bookDAO.findAll();
 	}
 	
-	public void LibroFiltrado(){
+	public String NombreLibro(){
 		
 		for( Book s : this.bookList ){
 			if (s.getNombre().contains(name)) {
-				this.bookFiltrado.add(s);
-				break;
+				return s.getNombre().toString();
 			}
-			if (s.getDescription().contains(name)) {
-				this.bookFiltrado.add(s);
-				break;
-			}
-			if (s.getAutor().contains(name)) {
-				this.bookFiltrado.add(s);
-				break;
-			}
+//			if (s.getDescription().contains(name)) {
+//				this.bookFiltrado.add(s);
+//				break;
+//			}
+//			if (s.getAutor().contains(name)) {
+//				this.bookFiltrado.add(s);
+//				break;
+//			}
+//			if (s.getEditorial().contains(name)) {
+//				this.bookFiltrado.add(s);
+//				break;
+//			}
+//			if (s.getImagen().contains(name)) {
+//				this.bookFiltrado.add(s);
+//				break;
+//			}
+//			if (s.getIsbn().contains(name)) {
+//				this.bookFiltrado.add(s);
+//				break;
+//			}
+//			if (s.getParsePrecio().contains(name)) {
+//				this.bookFiltrado.add(s);
+//				break;
+//			}
 		}
+		return message;
+	}
+	
+	public Book FindByPK(String autor, String isbn){
+		return bookDAO.findByPK(autor, isbn);
 	}
 }

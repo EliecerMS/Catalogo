@@ -20,11 +20,11 @@
 </h:head>
 <h:body styleClass="font body">
 <!-- <h:panelGroup layout="block" styleClass="container12"> -->
-	<h:panelGroup layout="bolck" styleClass="first-container">
+	<h:panelGroup layout="block" styleClass="first-container">
 		<h:panelGroup layout="block" styleClass="div_image">
 			<h:graphicImage name="preview" id="preview" value="" style="width:65%; display:block; margin:auto; border:1px solid #1f2020; height:350px" alt="Imagen"></h:graphicImage>
 			<br />
-			<h:inputText id="urllink" p:placeholder="Inserte el link de la imagen" styleClass="inputtext font" style="width:57%"></h:inputText>
+			<h:inputText id="urllink" value="#{indexFaces.imagen}" p:placeholder="Inserte el link de la imagen" styleClass="inputtext font" style="width:57%"></h:inputText>
 		</h:panelGroup>
 		<h:panelGroup layout="block" styleClass="divscroll">
 			<h:form>
@@ -62,7 +62,9 @@
 		<!--             <h:outputLabel>Descripción</h:outputLabel> -->
 		            <h:inputText value="#{indexFaces.description}" p:placeholder="Descripción" styleClass="inputtext font"></h:inputText>
 		            <br />
-		            <h:commandButton value="Guardar" action="#{indexFaces.guardar()}" styleClass="buttons font"></h:commandButton>
+		            <h:commandButton value="Guardar" action="#{indexFaces.guardar()}" styleClass="buttons font">
+		            <f:ajax execute="@form" render="results" />
+		            </h:commandButton>
 		       </h:panelGrid>
  			 </h:form>
  			 <h:panelGroup layout="block" styleClass="divoptionssave">

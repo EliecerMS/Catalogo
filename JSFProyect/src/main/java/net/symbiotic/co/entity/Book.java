@@ -41,6 +41,8 @@ public class Book {
 	@Column
 	private String imagen;
 	
+//	private String ParsePrecio;
+	
 	public Book(){
 		
 	}
@@ -111,6 +113,7 @@ public class Book {
 
 	public void setPrecio(double precio) {
 		this.precio = precio;
+//		this.ParsePrecio = Double.toString(precio);
 	}
 
 	public String getTema() {
@@ -128,6 +131,14 @@ public class Book {
 	public void setImagen(String imagen) {
 		this.imagen = imagen;
 	}
+
+//	public String getParsePrecio() {
+//		return ParsePrecio;
+//	}
+//
+//	public void setParsePrecio(String parsePrecio) {
+//		ParsePrecio = parsePrecio;
+//	}
 	
 	
 }

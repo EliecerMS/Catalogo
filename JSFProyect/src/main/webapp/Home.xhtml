@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+ 
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:f="http://java.sun.com/jsf/core"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:p="http://xmlns.jcp.org/jsf/passthrough"
+    xmlns:c="http://primefaces.org/ui">
+ 
+<f:loadBundle basename="net.symbiotic.jsf.properties.messages" var="msg" />
+ 
+<h:head>
+    <title>Home</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <h:outputStylesheet name="css/styles.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <h:outputScript name="js/preview_image.js" />
+<!--     <h:outputScript name="js/rows_as_columns.js" /> -->
+    
+</h:head>
+<h:body styleClass="font body">
+<!-- <h:panelGroup layout="block" styleClass="container12"> -->
+	<h:panelGroup layout="bolck" styleClass="first-container">
+		<h:panelGroup layout="block" styleClass="div_image">
+			
+		</h:panelGroup>
+		<h:panelGroup layout="block" styleClass="divscroll">
+		
+		
+		<h:dataTable value="#{searchBookFaces.bookList}" var="book" 
+		styleClass="employeeTable"
+         headerClass="BookTableHeader"
+         columnClasses="BookTableOddRow">
+<!--          ,BookTableEvenRow" -->
+			
+		
+			<h:column>
+					<h:graphicImage value="#{book.imagen}" style="width:80%; display:block; margin:auto"/>
+					<h:panelGroup layout="block" style="width:150px; margin: auto; padding: 0px 15px 0px 15px">
+						<h:outputText value="#{book.nombre}" />
+					</h:panelGroup>
+			</h:column>
+			
+		 </h:dataTable>
+		</h:panelGroup>
+	</h:panelGroup>
+	
+</h:body>
+</html>

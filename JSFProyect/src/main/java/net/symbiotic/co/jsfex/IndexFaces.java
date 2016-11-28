@@ -25,7 +25,7 @@ import net.symbiotic.co.entity.User;
 	    private String nombre;
 	    private String precio;
 	    private String tema;
-	    private String productImage="http://movietimepoblado.com/wp-content/uploads/2011/04/Harry_Potter_Y_Las_Reliquias_De_La_Muerte_-_Parte_1_-_Region_4_por_Seba19_dvd_80.jpg";
+	    private String imagen;
 	    
 	    @EJB
 	    UserDAO userDao;
@@ -119,15 +119,13 @@ import net.symbiotic.co.entity.User;
 		public void setTema(String tema) {
 			this.tema = tema;
 		}
-		
-		
 
-		public String getProductImage() {
-			return productImage;
+		public String getImagen() {
+			return imagen;
 		}
 
-		public void setProductImage(String productImage) {
-			this.productImage = productImage;
+		public void setImagen(String imagen) {
+			this.imagen = imagen;
 		}
 
 		public void guardar(){
@@ -140,6 +138,7 @@ import net.symbiotic.co.entity.User;
 	    	save.setNombre(nombre);
 	    	save.setPrecio(Double.parseDouble(precio));
 	    	save.setTema(tema);
+	    	save.setImagen(imagen);
 	    	bookDao.save(save);
 	    }
 		

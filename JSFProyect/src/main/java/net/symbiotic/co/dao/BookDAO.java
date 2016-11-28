@@ -56,6 +56,10 @@ public class BookDAO {
 		return BookAccessor.findByName(name).all();
 	}
 	
+	public Book findByPK(String autor,String isbn){
+		return BookMapper.get(autor, isbn);
+	}
+	
 	public List<Book> findAll(){
 		return BookAccessor.findAll().all();
 	}

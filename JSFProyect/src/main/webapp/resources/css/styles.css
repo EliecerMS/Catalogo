@@ -130,7 +130,7 @@ hr{
    text-align:justify;
 }
 
-/* Estilos Tabla SearchBook.xhtml*/
+/* Estilos Tabla */
 
 
 .employeeTable{
@@ -157,6 +157,44 @@ hr{
    border-bottom: 25px solid #1f2020;
    padding:17px 17px 17px 17px;
 }
+
+
+
+
+
+
+
+
+
+
+.BookTableHeader{
+   text-align:center;
+   background:none repeat scroll 0 0 #B5B5B5;
+   padding:2px;
+}
+
+.BookTableOddRow{
+   text-align:center;
+   background:none repeat scroll 0 0 #383838;
+   border-bottom: 25px solid #1f2020;
+   border-right: 25px solid #1f2020;
+   width: 180px;
+   padding:17px 5px 17px 5px;
+   vertical-align:top;
+}
+
+.BookTableEvenRow{
+   text-align:justify;
+   background:none repeat scroll 0 0 #2b2b2b;
+   border-bottom: 25px solid #1f2020;
+   padding:17px 17px 17px 17px;
+}
+
+
+
+
+
+
 
 .divcriterioBusqueda{
 	margin-top:23px;
