@@ -3,6 +3,9 @@
 
 /* estilos generales */
 
+#homeresults tr{
+	display:inherit;
+}
 
 html, .body{
 	background-color: #1f2020;
@@ -147,7 +150,7 @@ hr{
    text-align:center;
    background:none repeat scroll 0 0 #383838;
    border-bottom: 25px solid #1f2020;
-   width: 13%;
+   width: 17%;
    padding:17px 17px 17px 17px;
 }
 

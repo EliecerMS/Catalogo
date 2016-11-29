@@ -35,7 +35,9 @@
 			
 			<h:column>
 				<h:graphicImage value="#{book.imagen}" style="width:80%; display:block; margin:auto"/>
-				<h:outputText style="width:50px" value="#{book.nombre}" />
+				<h:panelGroup layout="block" style="width: 160px; margin: 0 auto">
+					<h:outputText style="width:50px" value="#{book.nombre}" />
+				</h:panelGroup>
 			</h:column>
 				<hr/>
 			
