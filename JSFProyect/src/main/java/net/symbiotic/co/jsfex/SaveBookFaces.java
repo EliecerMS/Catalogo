@@ -14,7 +14,7 @@ import net.symbiotic.co.entity.User;
 	
 	@ManagedBean
 	@SessionScoped
-	public class IndexFaces {
+	public class SaveBookFaces {
 		private String name;
 	    private String user_id;
 	    private String autor;
