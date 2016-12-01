@@ -13,11 +13,29 @@
 <h:head>
     <title>Especificaciones del Libro</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <h:outputStylesheet name="css/styles.css" />
+    <h:outputStylesheet name="css/styles.css" /> 
+    <script src="http://code.jquery.com/jquery-1.11.2.min.js" type="text/javascript"></script>
+    <h:outputScript name="js/menu.js" />
 </h:head>
 <h:body styleClass="font body">
 	<h:panelGroup layout="block" styleClass="first-container">
 		<h:panelGroup layout="block" styleClass="div_image">
+			<h:panelGroup layout="block" id="menu" styleClass="mostrar">
+				<ul class="nav">
+				<li><h:link outcome="Home">Home</h:link></li>
+				<li><h:link outcome="SearchBook">Buscar</h:link></li>
+				<li><h:link outcome="SaveBook">Guardar</h:link></li>
+				</ul>
+			</h:panelGroup>
+
+
+
+			<h:panelGroup layout="block" id="mostrar-nav" styleClass="container"
+				onclick="myFunction(this)">
+				<h:panelGroup layout="block" styleClass="bar1"></h:panelGroup>
+				<h:panelGroup layout="block" styleClass="bar2"></h:panelGroup>
+				<h:panelGroup layout="block" styleClass="bar3"></h:panelGroup>
+			</h:panelGroup>
 			<h:graphicImage value="#{bookInformation.libro.imagen}" style="width:65%; display:block; margin:auto"/>
 <!-- 				<h:panelGroup layout="block" style="height: 50%; width: 80%; background-color:black; margin:auto; vertical-align: middle"></h:panelGroup> -->
 			<br />
@@ -31,7 +49,7 @@
 <!--   				</h:panelGrid> -->
 <!--   			</h:form> -->
 			
-			
+		
 			<h:outputLabel value="AUTOR:"></h:outputLabel>
 			<span style="display:inline-block; width: 38px"></span>
 			<h:outputText value="#{bookInformation.libro.autor}"></h:outputText>
@@ -72,11 +90,11 @@
 			<h:outputText value="#{bookInformation.libro.editorial}"></h:outputText>
 			<hr id="mediana"/>
 			<br />
-			
+<!-- 		<h:panelGroup layout="block" style="background-color: red"> -->
 			<h:outputLabel value="DESCRIPCIÓN"></h:outputLabel>
 			<hr/>
 			<h:outputText value="#{bookInformation.libro.description}"></h:outputText>
-			
+<!-- 			</h:panelGroup> -->
 			
 		</h:panelGroup>
 <!-- 		     PRUEBA -->

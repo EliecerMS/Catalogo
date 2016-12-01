@@ -16,15 +16,33 @@
     <h:outputStylesheet name="css/styles.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <h:outputScript name="js/preview_image.js" />
-    
+    <h:outputScript name="js/menu.js" />
 </h:head>
 <h:body styleClass="font body">
 <!-- <h:panelGroup layout="block" styleClass="container12"> -->
 	<h:panelGroup layout="block" styleClass="first-container">
 		<h:panelGroup layout="block" styleClass="div_image">
+
+			<h:panelGroup layout="block" id="menu" styleClass="mostrar">
+				<ul class="nav">
+					<li><h:link outcome="Home">Home</h:link></li>
+					<li><h:link outcome="SearchBook">Buscar</h:link></li>
+					<li><h:link outcome="SaveBook">Guardar</h:link></li>
+				</ul>
+			</h:panelGroup>
+
+
+
+			<h:panelGroup layout="block" id="mostrar-nav" styleClass="container"
+				onclick="myFunction(this)">
+				<h:panelGroup layout="block" styleClass="bar1"></h:panelGroup>
+				<h:panelGroup layout="block" styleClass="bar2"></h:panelGroup>
+				<h:panelGroup layout="block" styleClass="bar3"></h:panelGroup>
+			</h:panelGroup>
+
 			<h:graphicImage name="preview" id="preview" value="" style="width:65%; display:block; margin:auto; border:1px solid #1f2020; height:350px" alt="Imagen"></h:graphicImage>
 			<h:inputText id="urllink" value="" p:placeholder="Inserte el link de la imagen" styleClass="inputtext font" style="width:57%"></h:inputText>
-			<h:inputText id="url" value="" p:placeholder="Inserte el link de la imagen" styleClass="inputtext font"></h:inputText>
+			
 		</h:panelGroup>
 		<h:panelGroup layout="block" styleClass="divscroll">
 			<h:form>
@@ -59,7 +77,7 @@
 		            <h:inputText value="#{saveBookFaces.tema}" p:placeholder="Tema" styleClass="inputtext font"></h:inputText>
 		            <br />
 		            <br />
-					
+					<h:inputText id="url" value="" p:placeholder="Inserte el link de la imagen" styleClass="inputtext font"></h:inputText>
 		<!--             <h:outputLabel>Descripción</h:outputLabel> -->
 					<br />
 		            <br />
