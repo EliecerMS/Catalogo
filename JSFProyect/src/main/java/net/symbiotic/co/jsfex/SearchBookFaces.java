@@ -112,8 +112,4 @@ public class SearchBookFaces {
 		}
 		return message;
 	}
-	
-	public Book FindByPK(String autor, String isbn){
-		return bookDAO.findByPK(autor, isbn);
-	}
 }

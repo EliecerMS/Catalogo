@@ -210,7 +210,6 @@ hr{
    flex:1; padding: 0px 31px 0px 31px; background-color:#1f2020;
    top: 0; bottom: 0;
    height: 550px;
-   display:none;
 }
 
 .bodySearch{
@@ -503,4 +502,102 @@ ul a {
     -webkit-transform: scale(1);
             transform: scale(1);
   }
+}
+
+
+/* caption */
+/*caption transition*/
+
+.containercaption {
+    display: inline-block;
+    margin:0;
+    width: 49.7%;
+}
+.containercaption2 {
+    display: inline-block;
+    margin: 0px;
+    width: 49.7%;
+}
+
+/*
+ * Caption component
+ */
+.caption {
+    position: relative;
+    overflow: hidden;
+
+    /* Only the -webkit- prefix is required these days */
+    -webkit-transform: translateZ(0);
+            transform: translateZ(0);
+}
+
+.caption::before {
+    content: ' ';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: transparent;
+    transition: background .35s ease-out;
+}
+
+.caption:hover::before {
+    background: rgba(0, 0, 0, .5);
+}
+
+.caption__media {
+    display: block;
+    min-width: 100%;
+    max-width: 100%;
+    height: auto;
+}
+
+.caption__overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 10px;
+    color: white;
+
+    -webkit-transform: translateY(100%);
+            transform: translateY(100%);
+
+    transition: -webkit-transform .35s ease-out;
+    transition:         transform .35s ease-out;
+}
+
+.caption:hover .caption__overlay {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+}
+
+.caption__overlay__title {
+    -webkit-transform: translateY( -webkit-calc(-100% - 10px) );
+            transform: translateY( calc(-100% - 10px) );
+
+    transition: -webkit-transform .35s ease-out;
+    transition:         transform .35s ease-out;
+    margin-bottom: 20px;
+}
+
+.caption:hover .caption__overlay__title {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+}
+
+.classeye{
+  -webkit-transition: width 0.4s; /* For Safari 3.1 to 6.0 */
+  transition: width 0.4s;
+  transition: 0.4s ease;
+  -moz-transition: 0.4s ease; /* Firefox */
+  -webkit-transition: 0.4s ease; /* Chrome - Safari */
+  -o-transition: 0.4s ease; /* Opera */
+}
+.classeye:hover{
+  background-color: rgba(45, 45, 45,);
+  /*border: 2px solid #737373;*/
+  border-radius: 5px;
 }

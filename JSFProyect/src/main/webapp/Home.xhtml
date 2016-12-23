@@ -44,12 +44,25 @@
 			
 		
 			<h:column>
-					<h:graphicImage value="#{book.imagen}" style="width:80%; display:block; margin:auto"/>
-					<h:panelGroup layout="block" style="width:150px; margin: auto; padding: 0px 15px 0px 15px">
+				  <article class="caption">
+                      <h:graphicImage value="#{book.imagen}" style="width:80%; display:block; margin:auto"/>
+                      <h:panelGroup styleClass="caption__overlay">
+                          <h:link outcome="BookInformation">
+                            <img src="http://reepcorp.com/images/reep-eye-white.png" style="width: 40px;
+    						margin-top: 80px"/>
+    						<f:param name="bookautor" value="#{book.autor}" />
+							<f:param name="bookisbn" value="#{book.isbn}" />
+						  </h:link>
+<!--                             onmouseover="this.src='icons/eye.png'" -->
+<!--                             onmouseout="this.src='icons/eye (2).png'" -->
+<!--                             border="0" alt="" -->
+                            
+                      </h:panelGroup>
+                  </article>
+                  <h:panelGroup layout="block" style="width:150px; margin: auto; padding: 0px 15px 0px 15px">
 						<h:outputText value="#{book.nombre}" />
-					</h:panelGroup>
+				  </h:panelGroup>
 			</h:column>
-			
 		 </h:dataTable>
 		</h:panelGroup>
 	</h:panelGroup>
